@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  color: white;
+  background: #081b29;
+}
+a {
+  color: white !important;
+  text-decoration: none;
+}
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #00abf0;
+  margin-bottom: 50px;
+}
+
+/* Header */
+header .navbar-brand {
+  font-size: 48px;
+  font-weight: 700;
+}
+header .nav-link {
+  position: relative;
+  font-size: 18px;
+  margin: 0 10px;
+}
+header .nav-item .nav-link.active {
+  color: #00abf0 !important;
+}
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00abf0;
+  transition: all 0.5s ease;
+}
+header .nav-link:hover::before {
+  width: 100%;
+}
+header .nav-link:hover {
+  color: #00abf0 !important;
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+}
+header .active::before {
+  width: 100%;
+}
+
+/* Banner */
+.banner {
+  height: 580px;
+}
+.banner_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.banner_content .content_left {
+  max-width: 620px;
+}
+.banner_content .content_left h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.banner_content .content_left h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  color: #00abf0;
+}
+.banner_content .content_left p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.banner_content .content_left button:hover i {
+  animation: toLeftFromRight 0.5s forwards;
+}
+.banner .social a {
+  margin-right: 20px;
+}
+.banner .social i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid;
+  transition: all 0.5s ease;
+}
+.banner .social i:hover {
+  background-color: #01a0df;
+}
+.banner_content .content_right img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+}
+
+/* Skills */
+#skills .skills_box {
+  transition: all 0.5s ease;
+}
+#skills .skills_box img {
+  width: 50px;
+  height: 60px;
+}
+#skills .skills_box p {
+  font-size: 20px;
+}
+#skills .skills_box:hover {
+  background-color: #006a94;
+}
+
+/* Projects */
+#projects .projects_box .box_left {
+  max-width: 430px;
+}
+#projects .projects_box .box_left h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  color: #00abf0;
+}
+#projects .projects_box .box_left p {
+  font-size: 20px;
+  line-height: 30px;
+}
+#projects .projects_box .box_right img {
+  height: 450px;
+  width: 650px;
+  border-radius: 10px;
+}
+#projects .projects_box a {
+  transition: all 0.5s ease;
+}
+#projects .projects_box a:hover {
+  color: #00abf0 !important;
+}
+
+/* Recommendations */
+#recommendations .carousel_item {
+  height: 250px;
+}
+#recommendations .carousel_item q {
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background-color: #06141c;
+}
+
+/* Back To Top */
+.backToTop {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  background: #00abf0;
+  display: block;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  box-shadow: -4px 4px 24px -10px #f55f8d;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5 ease;
+}
+.backToTop:hover {
+  border: 1px solid white;
+}
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+/* .cd-top--fade-out {
+  opacity: 0.5;
+} */
+
+/* Animation */
+@keyframes toLeftFromRight {
+  49% {
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
